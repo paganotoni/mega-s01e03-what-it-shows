@@ -4,14 +4,14 @@ title: '#4471 · two problems, not one'
 owner: support desk
 status: living
 reviewed: 2026-11-24
-signature: Antonio Pagano
+signature: v1.eyJzdWIiOiIyMDIxNyIsImF1ZCI6ImNoYWxsZW5nZTp3aGF0LWl0LXNob3dzIiwiaWF0IjoxNzk1NTM1Nzk5LCJleHAiOjE3OTU2MjIxOTl9.ZxPT3qv2paCnHbTIw3vDwKlWesu2ZpKZlFMhoLv9a64
 ---
 
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import Callout from '#lib/kb/Callout.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
-  const signature = 'Antonio Pagano';
+  const signature = 'v1.eyJzdWIiOiIyMDIxNyIsImF1ZCI6ImNoYWxsZW5nZTp3aGF0LWl0LXNob3dzIiwiaWF0IjoxNzk1NTM1Nzk5LCJleHAiOjE3OTU2MjIxOTl9.ZxPT3qv2paCnHbTIw3vDwKlWesu2ZpKZlFMhoLv9a64';
 </script>
 
 #4471 merged every date report into one known parser bug. The reports are two
