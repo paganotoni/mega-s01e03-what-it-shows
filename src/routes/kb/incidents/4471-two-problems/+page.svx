@@ -45,4 +45,11 @@ Intake tags from the browser locale, which often disagrees with the tenant.
 Neither is the cause. Split #4471: one ticket per cause, with the report count
 from the table.
 
+## 5 October
+
+Engineering closed #4471.
+
+- `parser` — FIXED — `fix(dates): parse dd/mm for eu locales`
+- `hint` — WON'T FIX — booking-v3 form retired
+
 <RenderStamp {signature} />
