@@ -1,0 +1,48 @@
+---
+layout: runbook
+title: '#4471 · two problems, not one'
+owner: support desk
+status: living
+reviewed: 2026-11-24
+signature: Antonio Pagano
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  const signature = 'Antonio Pagano';
+</script>
+
+#4471 merged every date report into one known parser bug. The reports are two
+causes. Cause follows the tenant (locale and booking form), not the subject
+line and not intake's tag.
+
+<Callout kind="warn">
+#4471 is not one issue. The hint reports have no ticket of their own.
+</Callout>
+
+## What was merged
+
+<CauseTable ticket={4471} />
+
+## parser
+
+The shared parser reads every date month first. A day-first tenant's dates come
+out flipped: 7 April becomes 4 July. App, email, and booking-v2 forms all hit
+this. That is the bulk of #4471.
+
+## hint
+
+booking-v3 prints `MM/DD/YYYY` under the date field. People type what the hint
+says. The form still reads the date the tenant's way (day first). The month
+flips for a different reason. Same subject as parser; not the same bug.
+
+## Why they sat in one ticket
+
+Triage merges on subject ([decision 0001](/kb/decisions/0001-dedupe-by-subject)).
+Intake tags from the browser locale, which often disagrees with the tenant.
+Neither is the cause. Split #4471: one ticket per cause, with the report count
+from the table.
+
+<RenderStamp {signature} />
